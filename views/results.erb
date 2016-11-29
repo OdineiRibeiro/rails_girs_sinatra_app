@@ -2,8 +2,8 @@
   <% Choices.each do |id, text| %>
     <tr>
       <th><%= text %></th>
-      <td><%= @votes[id] || 0 %>
-      <td><%= '#' * (@votes[id] || 0) %></td>
+      <!-- <td><%= @votes[id] || 0 %></td> -->
+      <td><%= '<span class="glyphicon glyphicon-star"></span>' * (@votes[id] || 0) %></td>
     </tr>
   <% end %>
 </table>
