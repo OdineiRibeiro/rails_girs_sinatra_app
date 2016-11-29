@@ -9,6 +9,7 @@ Source: http://guides.railsgirls.com/sinatra-app
 
 # Comofas?
 
+- ```gem install bundler```
 - ```bundle install```
 - ```ruby impacta.rb```
 - visite localhost:4567

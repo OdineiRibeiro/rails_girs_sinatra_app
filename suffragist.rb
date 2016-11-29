@@ -1,6 +1,9 @@
 require 'sinatra'
 require 'yaml/store'
 require 'pry'
+require 'httpclient'
+require 'json'
+
 require './helpers/firebase_api.rb'
 
 # Source: http://guides.railsgirls.com/sinatra-app
@@ -22,7 +25,10 @@ post '/cast' do
   @title = 'Thanks for casting your vote!'
   @vote  = params['vote']
 
-  # FirebaseApi.push(params)
+  # FirebaseApi.test
+  
+  binding.pry
+  
 
   @store = YAML::Store.new 'votes.yml'
   @store.transaction do
