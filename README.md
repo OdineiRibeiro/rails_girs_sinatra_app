@@ -11,5 +11,5 @@ Source: http://guides.railsgirls.com/sinatra-app
 
 - ```gem install bundler```
 - ```bundle install```
-- ```ruby impacta.rb```
+- ```ruby suffragist.rb```
 - visite localhost:4567
