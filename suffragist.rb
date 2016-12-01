@@ -17,13 +17,13 @@ get '/' do
     'NOO' => 'Noodles'
   }.freeze
 
-  @title = 'Welcome to the Suffragist!'
+  @title = 'Bem vindo ao Suffragist!'
 
   erb :index
 end
 
 post '/cast' do
-  @title = 'Thanks for casting your vote!'
+  @title = 'Obrigado pelo seu voto!'
   @vote  = params['vote']
 
   response = FirebaseApi.get('votes.json')
