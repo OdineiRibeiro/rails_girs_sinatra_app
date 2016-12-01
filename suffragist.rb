@@ -3,8 +3,9 @@ require 'yaml/store'
 require 'pry'
 require 'httpclient'
 require 'json'
-
 require './helpers/firebase_api.rb'
+require 'dotenv'
+Dotenv.load
 
 # Source: http://guides.railsgirls.com/sinatra-app
 
@@ -25,24 +26,19 @@ post '/cast' do
   @title = 'Thanks for casting your vote!'
   @vote  = params['vote']
 
-  # FirebaseApi.test
-  
-  binding.pry
-  
-
-  @store = YAML::Store.new 'votes.yml'
-  @store.transaction do
-    @store['votes'] ||= {}
-    @store['votes'][@vote] ||= 0
-    @store['votes'][@vote] += 1
-  end
+  response = FirebaseApi.get('votes.json')
+  body = JSON.parse(response.body)
+  body[params['vote']] = body[params['vote']] + 1
+  FirebaseApi.put('votes.json', body)
 
   erb :cast
 end
 
 get '/results' do
   @title = 'Results so far:'
-  @store = YAML::Store.new 'votes.yml'
-  @votes = @store.transaction { @store['votes'] }
+  response = FirebaseApi.get('votes.json')
+  body = JSON.parse(response.body)
+  @votes = body
+
   erb :results
 end

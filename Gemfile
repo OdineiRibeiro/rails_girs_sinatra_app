@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'rubocop'
-gem 'rest-client'
 gem 'httpclient'
+gem 'rest-client'
+gem 'rubocop'
+gem 'sinatra'
 
-group :development do
+group :development, :test do
+  gem 'dotenv'
   gem 'pry'
 end
