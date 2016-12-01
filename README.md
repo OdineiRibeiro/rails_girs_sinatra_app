@@ -6,6 +6,7 @@ Source: http://guides.railsgirls.com/sinatra-app
 
 - Ruby 2.3.2 (pls, instale com o [rbenv](https://github.com/rbenv/rbenv#installation))
 - Sinatra 1.4.7
+- Firebase
 
 # Comofas?
 
