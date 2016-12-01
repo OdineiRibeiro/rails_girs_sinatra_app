@@ -2,9 +2,13 @@
   <% Choices.each do |id, text| %>
     <tr>
       <th><%= text %></th>
-      <!-- <td><%= @votes[id] || 0 %></td> -->
       <td><%= @votes[id] %> | <%= '<span class="glyphicon glyphicon-star" style="color:#f4e842;text-shadow:1px 1px #595959;"></span>' * (@votes[id] || 0) %></td>
     </tr>
   <% end %>
+  <tr>
+    <th>Total de votos</th>
+    <!--  Ficou feio demais isso aqui embaixo -->
+    <td><strong><%= @votes.values.inject(:+) %></strong></td>
+  </tr>
 </table>
 <p><a href='/'>Cast more votes!</a></p>

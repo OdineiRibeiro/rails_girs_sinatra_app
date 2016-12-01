@@ -1,8 +1,11 @@
 require 'json'
 require 'httpclient'
+require 'colorize'
 
 module FirebaseApi
   def self.put(path, body)
+    puts 'Send a put to Firebase'.yellow
+
     request = HTTPClient.new(base_url: ENV['FIREBASE_BASE_URL'],
                              default_header: {
                                'Content-Type' => 'application/json'
@@ -14,6 +17,8 @@ module FirebaseApi
   end
 
   def self.get(path, body = '')
+    puts 'Send a get to Firebase'.yellow
+
     request = HTTPClient.new(base_url: ENV['FIREBASE_BASE_URL'],
                              default_header: {
                                'Content-Type' => 'application/json'

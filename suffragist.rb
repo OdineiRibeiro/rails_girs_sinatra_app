@@ -7,16 +7,16 @@ require './helpers/firebase_api.rb'
 require 'dotenv'
 Dotenv.load
 
+Choices = {
+  'HAM' => 'Hamburger',
+  'PIZ' => 'Pizza',
+  'CUR' => 'Curry',
+  'NOO' => 'Noodles'
+}.freeze
+
 # Source: http://guides.railsgirls.com/sinatra-app
 
 get '/' do
-  Choices = {
-    'HAM' => 'Hamburger',
-    'PIZ' => 'Pizza',
-    'CUR' => 'Curry',
-    'NOO' => 'Noodles'
-  }.freeze
-
   @title = 'Bem vindo ao Suffragist!'
 
   erb :index
