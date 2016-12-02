@@ -1,14 +1,5 @@
 require 'sinatra'
-require 'yaml/store'
-require 'httpclient'
-require 'json'
-require './helpers/firebase_api.rb'
-
-# Remove to use in development
-#
-# require 'pry'
-# require 'dotenv'
-# Dotenv.load
+require './config/application.rb'
 
 Choices = {
   'HAM' => 'Hamburger',
@@ -28,6 +19,8 @@ end
 post '/cast' do
   @title = 'Obrigado pelo seu voto!'
   @vote  = params['vote']
+
+  binding.pry
 
   response = FirebaseApi.get('votes.json')
   body = JSON.parse(response.body)

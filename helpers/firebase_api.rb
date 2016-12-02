@@ -1,7 +1,3 @@
-require 'json'
-require 'httpclient'
-require 'colorize'
-
 module FirebaseApi
   def self.put(path, body)
     puts 'Send a put to Firebase'.yellow
