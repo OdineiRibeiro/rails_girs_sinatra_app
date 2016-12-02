@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'yaml/store'
-require 'pry'
 require 'httpclient'
 require 'json'
 require './helpers/firebase_api.rb'
