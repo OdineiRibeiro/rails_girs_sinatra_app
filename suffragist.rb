@@ -3,8 +3,12 @@ require 'yaml/store'
 require 'httpclient'
 require 'json'
 require './helpers/firebase_api.rb'
-require 'dotenv'
-Dotenv.load
+
+# Remove to use in development
+#
+# require 'pry'
+# require 'dotenv'
+# Dotenv.load
 
 Choices = {
   'HAM' => 'Hamburger',
