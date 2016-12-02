@@ -6,9 +6,9 @@ require './helpers/firebase_api.rb'
 
 # Remove to use in development
 #
-require 'pry'
-require 'dotenv'
-Dotenv.load
+# require 'pry'
+# require 'dotenv'
+# Dotenv.load
 
 Choices = {
   'HAM' => 'Hamburger',
