@@ -2,6 +2,8 @@
 
 Source: http://guides.railsgirls.com/sinatra-app
 
+Para ver funcionando, visite https://rails-girls-sinatra-firebase.herokuapp.com
+
 # Informações
 
 - Ruby 2.3.2 (pls, instale com o [rbenv](https://github.com/rbenv/rbenv#installation))
