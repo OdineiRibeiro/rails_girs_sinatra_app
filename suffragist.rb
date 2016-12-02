@@ -20,8 +20,6 @@ post '/cast' do
   @title = 'Obrigado pelo seu voto!'
   @vote  = params['vote']
 
-  binding.pry
-
   response = FirebaseApi.get('votes.json')
   body = JSON.parse(response.body)
   body[params['vote']] = body[params['vote']] + 1
