@@ -38,7 +38,7 @@ post '/cast' do
 end
 
 get '/results' do
-  @title = 'Results so far:'
+  @title = 'Resultado parcial:'
   response = FirebaseApi.get('votes.json')
   body = JSON.parse(response.body)
   @votes = body
