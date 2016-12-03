@@ -5,6 +5,7 @@ configure :production, :development do
   require 'httpclient'
   require 'json'
   require './helpers/firebase_api.rb'
+  require './lib/sing.rb'
 end
 
 configure :development do

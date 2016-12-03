@@ -6,7 +6,7 @@ Para ver funcionando, visite https://rails-girls-sinatra-firebase.herokuapp.com
 
 # Informações
 
-- Ruby 2.3.2 (pls, instale com o [rbenv](https://github.com/rbenv/rbenv#installation))
+- Ruby ~~2.3.2~~ 2.3.3 (pls, instale com o [rbenv](https://github.com/rbenv/rbenv#installation))
 - Sinatra 1.4.7
 - Firebase
 
