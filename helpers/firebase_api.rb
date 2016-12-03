@@ -1,6 +1,6 @@
 module FirebaseApi
   def self.put(path, body)
-    Sing::Logger.log('Send a put to Firebase').yellow
+    Sing::Logger.log('Send a PUT to Firebase').yellow
 
     request = HTTPClient.new(base_url: ENV['FIREBASE_BASE_URL'],
                              default_header: {
@@ -13,7 +13,7 @@ module FirebaseApi
   end
 
   def self.get(path, body = '')
-    Sing::Logger.log('Send a put to Firebase').yellow
+    Sing::Logger.log('Send a GET to Firebase').yellow
 
     request = HTTPClient.new(base_url: ENV['FIREBASE_BASE_URL'],
                              default_header: {
